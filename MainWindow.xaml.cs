@@ -8,7 +8,7 @@ namespace HRManagementApp
 {
     public partial class MainWindow : Window
     {
-        private Button currentActiveButton;
+        private Button currentActiveButton = null!;
 
         public MainWindow()
         {
