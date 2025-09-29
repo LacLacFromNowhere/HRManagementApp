@@ -27,7 +27,7 @@ namespace HRManagementApp
             LeaveBtn.Click += (s, e) => NavigateTo("Leave Management", s as Button);
             ReportsBtn.Click += (s, e) => NavigateTo("Reports", s as Button);
             SettingsBtn.Click += (s, e) => NavigateTo("Settings", s as Button);
-            LogoutBtn.Click += LogoutBtn_Click;
+            LogoutBtn.Click += LogoutBtn_Click; 
         }
 
         private void NavigateTo(string section, Button clickedButton)
@@ -96,9 +96,7 @@ namespace HRManagementApp
 
         private void LoadEmployeeSection()
         {
-            // Employee management logic would go here
-            // This could include loading employee data from database,
-            // showing employee list, add/edit forms, etc.
+            ContentArea.Content = new Views.EmployeesView();
         }
 
         private void LoadAttendanceSection()
