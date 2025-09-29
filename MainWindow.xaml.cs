@@ -20,13 +20,13 @@ namespace HRManagementApp
         private void InitializeEventHandlers()
         {
             // Navigation event handlers
-            DashboardBtn.Click += (s, e) => NavigateTo("Dashboard", s as Button);
-            EmployeesBtn.Click += (s, e) => NavigateTo("Employees", s as Button);
-            AttendanceBtn.Click += (s, e) => NavigateTo("Attendance", s as Button);
-            PayrollBtn.Click += (s, e) => NavigateTo("Payroll", s as Button);
-            LeaveBtn.Click += (s, e) => NavigateTo("Leave Management", s as Button);
-            ReportsBtn.Click += (s, e) => NavigateTo("Reports", s as Button);
-            SettingsBtn.Click += (s, e) => NavigateTo("Settings", s as Button);
+            DashboardBtn.Click += (s, e) => NavigateTo("Dashboard", (s as Button)!);
+            EmployeesBtn.Click += (s, e) => NavigateTo("Employees", (s as Button)!);
+            AttendanceBtn.Click += (s, e) => NavigateTo("Attendance", (s as Button)!);
+            PayrollBtn.Click += (s, e) => NavigateTo("Payroll", (s as Button)!);
+            LeaveBtn.Click += (s, e) => NavigateTo("Leave Management", (s as Button)!);
+            ReportsBtn.Click += (s, e) => NavigateTo("Reports", (s as Button)!);
+            SettingsBtn.Click += (s, e) => NavigateTo("Settings", (s as Button)!);
             LogoutBtn.Click += LogoutBtn_Click;
         }
 
