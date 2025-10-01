@@ -15,6 +15,7 @@ namespace HRManagementApp
             InitializeComponent();
             InitializeEventHandlers();
             SetActiveButton(DashboardBtn); // Set Dashboard as default active
+            LoadSectionContent("dashboard");
         }
 
         private void InitializeEventHandlers()
@@ -40,8 +41,8 @@ namespace HRManagementApp
 
             // Since we don't have named elements in the current XAML, we'll show a message box for now
             // In a real application, you would have a ContentFrame or similar to load different user controls
-            MessageBox.Show($"Navigating to {section} section.\n\nIn a complete application, this would load the {section} module with its specific functionality.",
-                          "Navigation", MessageBoxButton.OK, MessageBoxImage.Information);
+            // MessageBox.Show($"Navigating to {section} section.\n\nIn a complete application, this would load the {section} module with its specific functionality.",
+            //               "Navigation", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Here you would typically load different UserControls or Pages based on the section
             LoadSectionContent(section);
@@ -71,7 +72,7 @@ namespace HRManagementApp
             switch (section.ToLower())
             {
                 case "dashboard":
-                    // Dashboard is already loaded
+                    LoadDoashboardSection();
                     break;
                 case "employees":
                     LoadEmployeeSection();
@@ -93,7 +94,10 @@ namespace HRManagementApp
                     break;
             }
         }
-
+        private void LoadDoashboardSection()
+        {
+            ContentArea.Content = new Views.DashboardView();
+        }
         private void LoadEmployeeSection()
         {
             ContentArea.Content = new Views.EmployeesView();
